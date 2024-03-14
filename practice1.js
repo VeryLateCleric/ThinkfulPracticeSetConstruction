@@ -17,4 +17,19 @@ console.log("Test 2 end:", mySet2); // Output: Set { 1, 2, 3 }
 // Size is included in all of these but is not normally
 // This may be due to an extension in the IDE
 
+// We can use this to see if an elements have been repeated or if all are unique as well.
+const myString = "hello";
+const uniqueChars = new Set(myString);
+console.log("Test 3: ", uniqueChars);
 
+
+// Sometimes we will need to check if an element exists in a set using .has()
+const mySet3 = new Set([1, 2, 3, 4, 5]);
+console.log("Test 4.1:", mySet3.has(2));    //true
+console.log("Test 4.2:", mySet3.has(4));    //true
+console.log("Test 4.3:", mySet3.has(6));    //false
+console.log("Test 4.4:", mySet3.has(8));    //false
+// We do not return the entire set, only if the set has the input as an element
+const mySetRepeat = new Set([1, 2, 2, 3, 4, 5]);
+console.log("Test 5.1:", mySetRepeat.has(2));    //true
+// Even repeated values do not post issue. They still exist, so the Set() .has() is
