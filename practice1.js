@@ -61,7 +61,7 @@ console.log("Test 7", keepSet)
 // We can also loop over the elements of the Set with either forEach() or a `for...of` loop
 const mySet6 = new Set([1, 2, 3]);
 mySet6.forEach(value => {
-    console.log(value);
+    console.log("Test 8:", value);
 });
 
 
@@ -69,3 +69,10 @@ mySet6.forEach(value => {
 const arrayWithDuplicates = [1, 2, 2, 3, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 8, 8, 9, 10];
 const uniqueArray = [...new Set(arrayWithDuplicates)]; //Using '...' spread operator to spread the elements of arrayWithDuplicates
 // This will allow the new uniqueArray to contain each of the unique elements
+console.log("Test 9:", uniqueArray);
+
+// Similarly we can find if a Set holds unique values by comparing array length and set size
+const hasDuplicates = arrayWithDuplicates.length !== new Set(arrayWithDuplicates).size;
+// This is a straightforward comparison between the .length and .size properties of each
+console.log("Test 10:", hasDuplicates);
+
