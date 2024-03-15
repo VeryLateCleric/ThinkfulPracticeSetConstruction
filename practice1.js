@@ -76,3 +76,16 @@ const hasDuplicates = arrayWithDuplicates.length !== new Set(arrayWithDuplicates
 // This is a straightforward comparison between the .length and .size properties of each
 console.log("Test 10:", hasDuplicates);
 
+// Sets can store unique object references in case we need to keep track of a collection of objects without duplicates.
+const obj1 = { id: 1, name: 'Po' };
+const obj2 = { id: 2, name: 'Arries'};
+const obj3 = { id: 3, name: 'Dugath'};
+const obj4 = { id: 4, name: 'Killian'};
+
+const objectSet = new Set();
+objectSet.add(obj1);
+objectSet.add(obj2);
+objectSet.add(obj3);
+objectSet.add(obj4);
+
+console.log("Test 11:", objectSet);
